@@ -1,0 +1,462 @@
+:root {
+    /* ----- COLOURS ------------------------------------------------------------ */
+        --color-primary: #007C53;                                 /* <-- green -- */
+        --color-secondary: #cc3399;                               /* <-- pink --- */
+        --color-warning: #ff3333;                                 /* <-- red ---- */
+        --color-information: #ffcc00;                             /* <-- yellow - */
+        --color-white: #ffffff;
+        --color-grey-1: #f6f6f6;
+        --color-grey-2: #eeeeee;
+        --color-grey-3: #e0e0e0;
+        --color-grey-4: #cccccc;
+        --color-grey-5: #6b6b6b;
+        --color-grey-6: #222222;
+        --color-black: #000000;
+        
+    /* ----- FONTS -------------------------------------------------------------- */
+        --font-heaning: Wayfarer, Helvetica, Geneva, Sans-Serif;
+    
+        --font-size-h1: 5rem;
+        --font-height-h1: 8rem;
+        
+        --font-size-h2: 3rem;
+        --font-height-h2: 4.8rem;
+        
+        --font-size-h3: 2.5rem;
+        --font-height-h3: 4rem;
+        
+        --font-size-h4: 2.2rem;
+        --font-height-h4: 3.5rem;
+    
+        --font-paragraph: Open Sans, Trebuchet MS, Lucida Grande, Geneva, Sans-Serif;
+        
+        --font-size-p1: 1.6rem;
+        --font-height-p1: 2.2rem;
+        
+        --font-size-p2: 1.4rem;
+        --font-height-p2: 2rem;
+        
+        --font-size-p3: 1.3rem;
+        --font-height-p3: 1.7rem;
+        
+        --font-weight-regular: 400;
+        --font-weight-semibold: 600;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+    }
+
+    ::selection {
+        background-color: var(--color-information);
+        color: var(--color-black);
+    }
+    
+    html {
+        box-sizing: border-box;
+        font-size: 62.5%;  /* --- Setting rem to = 10px --- */
+        scroll-behavior: smooth;
+        max-width: 100%;
+    }
+    
+    body {
+        font-size: var(--font-size-p1);
+        line-height: var(--font-height-p1);
+        font-weight: var(--font-weight-regular);
+        font-family: var(--font-paragraph);
+        color: var(--color-black);
+        background: var(--color-white);
+    }
+    
+    form.dform {
+        position: relative;
+        width: clamp(0rem, 100vw, 155rem);
+        margin: 5rem auto;
+        padding: 5rem max(0rem, 10rem);
+        background: var(--color-grey-3);
+        display: grid;
+        min-height: 77.6vh;
+    }
+    
+    #dform_container {
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #dform_pageholder {
+        position: relative;
+        width: 100% !important;
+    }
+    
+    .page-header-area {
+        padding: 0;
+    }
+    
+    .page-footer-area {
+        position: fixed;
+        bottom: 0;
+        padding: 0;
+    }
+    
+    .area {
+        position: relative;
+        padding: 0;
+    }
+    
+    .box {
+        padding: 0;
+    }
+    
+    .dform_widget {
+        margin-block: 4rem;
+    }
+
+    /* ------ FONTS ------------------------------------------------------------- */
+    
+    h1,
+    #dform_container h1,
+    #dform_container .header1 {
+        margin: 0 0 3rem;
+        padding: 0;
+        font-size: var(--font-size-h1);
+        line-height: var(--font-height-h1);
+        font-family: var(--font-heaning);
+    }
+    
+    h2,
+    #dform_container h2,
+    #dform_container .header2 {
+        margin: 0 0 3rem;
+        padding: 0;
+        font-size: var(--font-size-h2);
+        line-height: var(--font-height-h2);
+        font-family: var(--font-heaning);
+    }
+    
+    h3,
+    #dform_container h3,
+    #dform_container .header3{
+        margin: 0 0 3rem;
+        padding: 0;
+        font-size: var(--font-size-h3);
+        line-height: var(--font-height-h3);
+        font-family: var(--font-heaning);
+    }
+    
+    h4,
+    #dform_container h4,
+    #dform_container .header4 {
+        margin: 0 0 3rem;
+        padding: 0;
+        font-size: var(--font-size-h4);
+        line-height: var(--font-height-h4);
+        font-family: var(--font-heaning);
+    }
+    
+/* --- INPUT ELEMENTS ------------------------------------------------------- */
+
+#dform_container label,
+#dform_container legend,
+#dform_container .radiogroup label,
+#dform_container .checkboxgroup label {
+    display: inline-block;
+    margin-bottom: .6rem;
+    font-size: var(--font-size-p1);
+    line-height: var(-font-height-p1);
+    font-weight: var(--font-weight-semibold);
+    vertical-align: unset;
+}
+
+#dform_container .radiogroup label,
+#dform_container .checkboxgroup label {
+    display: inline;
+    margin: 0 1rem;
+}
+
+#dform_container .helptext {
+    padding: 0;
+    color: var(--color-grey-5);
+    font-size: var(--font-size-p1);
+    font-style: unset;
+}
+
+#dform_container .dform_fielderror {
+    box-shadow: none;
+    border: solid .2rem var(--color-warning);
+    outline: none;
+}
+
+#dform_container .dform_validationMessage {
+    padding: 0;
+    font-size: var(--font-size-p1);
+    color: var(--color-warning);
+}
+
+#dform_container input, 
+#dform_container select, 
+#dform_container textarea {
+    display: block;
+	margin-bottom: 0;
+	padding: 0.8rem;
+	height: 5rem;
+	width: min(100%, 445px);
+	font-size: var(--font-size-p1);
+    font-family: inherit;
+	background: var(--color-white);
+	border: 1px solid var(--color-grey-5);
+	transition: all 0.2s ease;;
+}
+
+#dform_container .small input {
+    width: min(100%, 21rem);
+}
+
+#dform_container .large input,
+#dform_container textarea {
+    width: min(100%, 70rem);
+}    
+    
+#dform_container textarea {
+    height: 17rem;
+}
+
+option {
+    font-size: 2rem;
+    line-height: var(--font-height-p1);
+    font-weight: var(--font-weight-regular);
+    font-family: var(--font-paragraph);
+    display: block;
+    min-height: 4rem;
+    margin: .5rem;
+    padding: .5rem;
+    white-space: nowrap;
+}
+
+#dform_container fieldset {
+    display: inline-block;
+    min-width: unset;
+    margin: 0;
+}
+
+#dform_container fieldset,
+#dform_container div[data-type=child] {
+    border: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 100%;
+    clear: both;
+}
+
+#dform_container .radiogroup,
+#dform_container .checkboxgroup {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0 0 2.5rem 0;
+}
+
+#dform_container .vertical .radiogroup,
+#dform_container .checkboxgroup {
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+}
+
+#dform_container .radiogroup br,
+#dform_container .checkboxgroup br {
+    display: none;
+}
+
+#dform_container .radiogroup span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    margin-right: 1rem;
+}
+
+#dform_container input[type='radio'],
+#dform_container input[type='checkbox'] {
+    display: inline-block;
+    margin: 0;
+    width: 5rem;
+    border-radius: 50%;
+    transition: all 0.2s ease;;
+}
+
+#dform_container input[type="radio"]:checked::after {
+    display: block;
+    position: relative;
+    background-color: var(--color-grey-5);
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#dform_container .checkboxgroup > span,
+#dform_container .dform_widget_type_checkbox > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#dform_container input[type="checkbox"]:checked::after,
+.dform_widget_type_checkbox input:checked::after {
+  font-family: "icomoon";
+  content: "\e92f";
+  color: var(--color-grey-5);
+  background: none;
+  font-size: 22px;
+  position: relative;
+  /*overwrite hosted CSS*/
+  width: auto;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/* --- INPUT FOCUS ---------------------------------------------------------- */
+
+#dform_container input:focus,
+#dform_container textarea:focus,
+#dform_container select:focus,
+#dform_container input:hover,
+#dform_container textarea:hover,
+#dform_container select:hover {
+    box-shadow: none;
+    border: .4rem solid var(--color-grey-5);
+    outline: .4rem solid var(--color-information);
+}
+
+#dform_container input[type='radio']:focus,
+#dform_container input[type='radio']:hover,
+#dform_container input[type='checkbox']:focus,
+#dform_container input[type='checkbox']:hover {
+    box-shadow: inset 0 0 0 .4rem #6b6b6b, 0 0 0 .4rem #ffcc02;
+    outline: none;
+}
+
+/* --- BUTTONS -------------------------------------------------------------- */
+
+#dform_container .dform_widget_type_buttonset {
+    margin: 0;
+    text-align: left;
+    font-family: "Open Sans Regular", "Trebuchet MS", "Lucida Grande", "Geneva", Sans-Serif;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+
+#dform_container .dform_widget_type_buttonset.vertical {
+    flex-direction: column;
+}
+
+#dform_container .button,
+#dform_container button {
+    color: var(--color-primary);
+    font-size: var(--font-height-p2);
+    line-height: var(--font-height-p2);
+    font-weight: var(--font-weight-semibold);
+    margin: 6rem 0 0;
+    padding: .5rem;
+    border: solid .1rem var(--color-primary);
+    text-decoration: none;
+    cursor: pointer;
+    background: var(--color-white);
+    border-radius: unset;
+    transition: 0.2s ease all;
+    width: 100%;
+    max-width: 44.5rem;
+    height: 5rem;
+    transition: all 0.2s ease;;
+}
+
+#dform_container input[type="submit"],
+#dform_container button[data-type="next"] {
+    color: var(--color-white);
+    background: var(--color-black);
+    border-color: var(--color-black);
+}
+
+/* --- BUTTONS HOVER -------------------------------------------------------- */
+
+#dform_container .button:hover, 
+#dform_container input[type="submit"]:hover, 
+#dform_container button[data-type="next"]:hover,
+#dform_container button:hover, 
+#dform_container .toggle-title:hover, 
+.esri-search button:hover {
+    color: var(--color-white);
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+/* --- BUTTONS FOCUS -------------------------------------------------------- */
+
+#dform_container .button:focus, 
+#dform_container button:focus,
+.esri-search button:focus {
+    color: var(--color-primary);
+    background: var(--color-white);
+    border-color: var(--color-primary);
+    box-shadow: none;
+    outline: .4rem solid var(--color-information);
+}
+
+#dform_container input[type="submit"]:focus,
+#dform_container button[data-type="next"]:focus {
+    color: var(--color-white);
+    background: var(--color-black);
+    border-color: var(--color-black);
+    box-shadow: none;
+    outline: .4rem solid var(--color-information);
+}
+
+/* --- BACK BUTTON ---------------------------------------------------------- */
+
+#dform_container  .dform_widget_type_buttonset.back-btn-container {
+    display: unset;
+}
+
+#dform_container  .dform_widget_type_buttonset.back-btn-container::before {
+    content: "<";
+    padding-right: .5rem;
+    font-family: inherit;
+    font-size: var(--font-height-p2);
+}
+
+#dform_container button.back-btn {
+    border: none;
+    background: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 0 3rem;
+    width: max-content;
+    height: max-content;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    font-family: var(--font-paragraph);
+    font-size: var(--font-height-p2);
+    line-height: auto;
+    color: var(--color-black);
+    font-weight: var(--font-weight-regular);
+    transition: text-decoration-thickness 0.2s ease;;
+}
+
+#dform_container button.back-btn:hover {
+    text-decoration-thickness: .4rem;
+}

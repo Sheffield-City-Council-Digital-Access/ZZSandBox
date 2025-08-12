@@ -1,0 +1,74 @@
+/* --- ACCORDION ------------------------------------------------------------ */
+
+#dform_container .accordion {
+  width: 100%;
+  max-width: 445px;
+  margin: 4rem 0;
+  border: none;
+  background-color: var(--color-white);
+}
+
+#dform_container .accordion:focus-within {
+  box-shadow: none;
+  outline: 0.4rem solid var(--color-warning);
+}
+
+#dform_container .accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem 1.6rem;
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-black);
+  border-bottom: 1px solid var(--color-black);
+  cursor: pointer;
+}
+
+#dform_container .accordion-header > h3 {
+  display: inline;
+  margin: 0;
+}
+
+#dform_container .accordion-header:hover {
+  background-color: var(--color-grey-1);
+}
+
+#dform_container .accordion-content {
+  display: none;
+  padding: 2rem 1.5rem;
+  font-size: var(--font-size-p1);
+  background-color: var(--color-white);
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+}
+
+#dform_container .accordion-item.active .accordion-content {
+  display: block;
+  max-height: 100px;
+}
+
+#dform_container .accordion-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+
+  background: var(--color-primary);
+}
+
+#dform_container .accordion-icon::after {
+  content: "\e909";
+  font-family: "icomoon";
+  font-size: 1.8rem;
+  color: var(--color-white);
+  transition: transform 0.2s ease-in-out;
+}
+
+#dform_container .accordion[open] .accordion-icon::after {
+  transform: rotate(180deg);
+}
+
+#dform_container details[open] .accordion-content {
+  display: block;
+}

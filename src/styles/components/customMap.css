@@ -1,0 +1,68 @@
+.map-container {
+  margin-top: 2rem;
+}
+
+#map_container {
+  padding: 0;
+  margin: 0;
+  height: 40rem;
+  width: 100%;
+  border: .1rem solid var(--color-grey-5);
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+#map_container:focus,
+#map_container:focus-within {
+  box-shadow: none;
+  border: 0.4rem solid var(--color-grey-5);
+  outline: 0.4rem solid var(--color-warning);
+}
+
+#dform_container .dform_gis_reversegeo {
+  color: var(--color-black) !important;
+}
+
+.esri-popup__main-container {
+  width: auto !important;
+}
+
+.map_container_error {
+  border: .4rem solid var(--color-error) !important;
+}
+
+#map_container>div.esri-view-root>div.esri-ui.calcite-theme-light>div.esri-ui-inner-container.esri-ui-corner-container>div.esri-ui-top-left.esri-ui-corner>div>div:nth-child(1):focus,
+#map_container>div.esri-view-root>div.esri-ui.calcite-theme-light>div.esri-ui-inner-container.esri-ui-corner-container>div.esri-ui-top-left.esri-ui-corner>div>div:nth-child(2):focus {
+  box-shadow: none;
+  border: .4rem solid var(--color-grey-5);
+  outline: .4rem solid var(--color-warning);
+}
+
+#map_container>div.esri-view-root>div.esri-ui.calcite-theme-light>div.esri-ui-inner-container.esri-ui-manual-container>div.esri-component.esri-attribution.esri-widget,
+#map_container>div.esri-view-root>div.esri-ui.calcite-theme-light>div.esri-ui-inner-container.esri-ui-manual-container>div.esri-component.esri-popup.esri-popup--aligned-top-center.esri-popup--shadow>div.esri-popup__main-container.esri-widget>div>section {
+  display: none;
+}
+
+#map_container > div.esri-view-root > div.esri-ui.calcite-theme-light > div.esri-ui-inner-container.esri-ui-corner-container > div.esri-ui-top-right.esri-ui-corner > div {
+  display: none;
+}
+
+div.esri-component.esri-search.esri-widget > div {
+  margin-left: -140% !important;
+  margin-top: 20% !important;
+}
+
+.esri-search__submit-button {
+  margin: 0 !important;
+  min-width: 5rem !important;
+}
+
+.esri-search__submit-button:hover {
+  color: var(--color-white) !important;
+  background: var(--color-primary) !important;
+}
+
+.esri-search__sources-button,
+.esri-search__clear-button {
+  display: none !important;
+}

@@ -1,0 +1,453 @@
+/* --- BUTTONS -------------------------------------------------------------- */
+
+#dform_container .dform_widget_type_buttonset {
+  margin-block: 6.2rem 0;
+  text-align: left;
+  font-family: "Open Sans Regular", "Trebuchet MS", "Lucida Grande", "Geneva",
+    Sans-Serif;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 1.2rem;
+}
+
+#dform_container .dform_widget_type_buttonset.vertical {
+  flex-direction: column;
+}
+
+#dform_container button,
+#dform_container a.link-btn {
+  color: var(--color-primary);
+  font-size: var(--font-height-p2);
+  line-height: var(--font-height-p2);
+  font-weight: var(--font-weight-semibold);
+  margin: 0;
+  padding: 0.6rem 1.2rem;
+  border: solid 0.1rem var(--color-primary);
+  text-decoration: none;
+  cursor: pointer;
+  background: var(--color-white);
+  border-radius: unset;
+  transition: 0.2s ease all;
+  flex: 1;
+  width: 100%;
+  max-width: 44.5rem;
+  min-height: 5rem;
+  max-height: 10rem;
+  transition: all 0.2s ease;
+}
+
+#dform_container a.link-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+}
+
+#dform_container button.primary-btn.dform_widget_type_button {
+  color: var(--color-white);
+  background: var(--color-black);
+  border-color: var(--color-black);
+}
+
+#dform_container button.disabled,
+#dform_container button[disabled] {
+  color: var(--color-grey-6);
+  background: var(--color-white);
+  border: solid 0.1rem var(--color-grey-6);
+  cursor: not-allowed;
+}
+
+#dform_container button.primary-btn.dform_widget_type_button.disabled {
+  color: var(--color-white) !important;
+  background: var(--color-grey-6) !important;
+  border: solid 0.1rem var(--color-grey-6) !important;
+  cursor: not-allowed !important;
+}
+
+/* --- BUTTONS HOVER -------------------------------------------------------- */
+
+#dform_container a.link-btn:hover,
+#dform_container button:not(.disabled):hover,
+#dform_container
+  button.primary-btn.dform_widget_type_button:not(.disabled):hover {
+  /*.esri-search button:hover {*/
+  color: var(--color-white);
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* --- BUTTONS FOCUS -------------------------------------------------------- */
+
+#dform_container button:focus,
+#dform_container a.link-btn:focus {
+  /*.esri-search button:focus {*/
+  color: var(--color-primary);
+  background: var(--color-white);
+  border-color: var(--color-primary);
+  box-shadow: none;
+  outline: 0.4rem solid var(--color-warning);
+  z-index: 999;
+}
+
+#dform_container button.disabled:focus {
+  color: var(--color-grey-6);
+  background: var(--color-white);
+  border: solid 0.1rem var(--color-grey-6);
+  cursor: not-allowed;
+  outline: none;
+}
+
+#dform_container button.primary-btn.dform_widget_type_button:focus {
+  color: var(--color-white);
+  background: var(--color-black);
+  border-color: var(--color-black);
+  box-shadow: none;
+  outline: 0.4rem solid var(--color-warning);
+}
+
+#dform_container button.primary-btn.dform_widget_type_button.disabled:focus {
+  color: var(--color-white);
+  background: var(--color-grey-6);
+  border: solid 0.1rem var(--color-grey-6);
+  cursor: not-allowed;
+  outline: none;
+}
+
+/* --- BACK BUTTON ---------------------------------------------------------- */
+
+#dform_container .dform_widget_type_buttonset.back-btn-container {
+  display: unset;
+  font-size: unset;
+  transition: all 0.2s ease;
+}
+
+#dform_container .dform_widget_type_buttonset.back-btn-container:focus-within {
+  background-color: var(--color-warning);
+}
+
+#dform_container .dform_widget_type_buttonset.back-btn-container::before {
+  content: "<";
+  font-family: inherit;
+  font-size: var(--font-height-p2);
+  font-weight: var(--font-weight-semibold);
+}
+
+#dform_container button.back-btn {
+  border: none;
+  background: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 0 4rem;
+  width: max-content;
+  min-height: unset;
+  height: max-content;
+  text-align: start;
+  text-decoration: underline;
+  text-underline-offset: 0.6rem;
+  font-family: var(--font-paragraph);
+  font-size: var(--font-height-p2);
+  line-height: auto;
+  color: var(--color-black);
+  font-weight: var(--font-weight-regular);
+  transition: text-decoration-thickness 0.2s ease;
+}
+
+#dform_container button.back-btn:hover {
+  color: var(--color-black);
+  background-color: transparent;
+  text-decoration-thickness: 0.3rem;
+}
+
+#dform_container .dform_widget_type_buttonset.back-btn-container:focus-within {
+  background-color: var(--color-warning);
+  border-bottom: 0.4rem solid var(--color-black);
+}
+
+#dform_container button.back-btn:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+/* --- LINK BUTTON ---------------------------------------------------------- */
+
+#dform_container button.link-btn.dform_widget_type_button {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  font-size: var(--font-size-p1);
+  font-weight: var(--font-weight-semibold);
+  text-align: unset;
+  background: transparent;
+  border: none;
+}
+
+#dform_container button.link-btn.dform_widget_type_button:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+  border: none;
+  box-shadow: none;
+}
+
+/* --- MAP ICON ------------------------------------------------------------- */
+
+#dform_container button.link-btn.map-icon.dform_widget_type_button::before {
+  content: "\e921";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  width: 5rem;
+  margin-right: 1rem;
+  padding: 1rem;
+  font-size: var(--font-size-h4);
+  font-family: var(--font-icon);
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+
+#dform_container
+  button.link-btn.map-icon.disabled.dform_widget_type_button::before {
+  content: "\e921";
+  color: var(--color-white);
+  background: var(--color-grey-6);
+  border: solid 0.1rem var(--color-grey-6);
+  cursor: not-allowed;
+  outline: none;
+}
+
+#dform_container
+  button.link-btn.map-icon.disabled.dform_widget_type_button:hover {
+  color: var(--color-grey-6);
+}
+
+/* --- GEO LOCATION --------------------------------------------------------- */
+
+#dform_container button.geo-btn.dform_widget_type_button {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  grid-template-rows: 2.5rem 2.5rem;
+  grid-column-gap: 1rem;
+  align-items: center;
+  padding: 0;
+  font-size: 1.6rem;
+  font-size: var(--font-size-p1);
+  font-weight: var(--font-weight-semibold);
+  text-align: unset;
+  background: transparent;
+  border: none;
+}
+
+#dform_container button.geo-btn.dform_widget_type_button:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+  border: none;
+  box-shadow: none;
+}
+
+#dform_container button.geo-btn.dform_widget_type_button::before {
+  content: "\e918";
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  width: 5rem;
+  padding: 1rem;
+  font-size: var(--font-size-h4);
+  font-family: var(--font-icon);
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+
+#dform_container button.geo-btn.dform_widget_type_button::after {
+  content: "(only works on a device with geolocation)";
+  color: var(--color-black);
+  font-weight: var(--font-weight-regular);
+  text-decoration: underline;
+  text-decoration-color: var(--color-background);
+}
+
+#dform_container button.geo-btn.dform_widget_type_button:hover::before,
+#dform_container
+  button.link-btn.map-icon.dform_widget_type_button:hover::before {
+  color: var(--color-primary);
+  background: var(--color-white);
+  text-decoration: underline;
+  text-decoration-color: var(--color-white);
+  border: 0.1rem solid var(--color-primary);
+}
+
+#dform_container
+  button.link-btn.map-icon.disabled.dform_widget_type_button:hover::before {
+  color: var(--color-white);
+  background: var(--color-grey-6);
+  text-decoration: underline;
+  text-decoration-color: var(--color-grey-6);
+  border: solid 0.1rem var(--color-grey-6);
+  cursor: not-allowed;
+}
+
+/* --- LOCATOR -------------------------------------------------------------- */
+
+#dform_container .locator-or-label,
+#dform_container .locator-container .dform_widget_type_buttonset {
+  margin: 0;
+}
+
+#dform_container .locator-or-label label {
+  font-weight: var(--font-weight-regular);
+  margin-block: 1rem 2rem;
+}
+
+#dform_container .locator-container .dform_widget_type_buttonset {
+  margin-block: 0.4rem 1.5rem;
+}
+
+#dform_container .locator-container .geo-btn {
+  margin-bottom: 0.5rem;
+}
+
+#dform_container .locator-container .link-btn.map-icon {
+  margin-top: 0.5rem;
+}
+
+#dform_container .locator-selected-address {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 70rem;
+  border-top: 0.1rem solid var(--color-grey-5);
+  border-bottom: 0.1rem solid var(--color-grey-5);
+}
+
+/* --- EXIT ----------------------------------------------------------------- */
+
+button .exit-btn::after,
+#dform_container .exit-btn::after {
+  content: "\e91c";
+  display: inline-block;
+  font-family: "Icomoon", sans-serif;
+  margin-left: 1.5rem;
+}
+
+/* --- PRINT THIS PAGE ------------------------------------------------------ */
+
+#dform_container .print-page-link-btn-container.dform_widget_type_html {
+  margin-block: 4rem;
+}
+
+.print-page-link-btn::before {
+  content: "\e909";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  width: 5rem;
+  margin-right: 1rem;
+  padding: 1rem;
+  font-size: var(--font-size-h4);
+  font-family: var(--font-icon);
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+
+.print-page-link-btn {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  font-size: 1.6rem;
+  font-size: var(--font-size-p1);
+  font-weight: var(--font-weight-semibold);
+  text-align: unset;
+  background: transparent;
+  border: none;
+}
+
+.print-page-link-btn:hover::before {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--color-white);
+  background: var(--color-white);
+  border: solid 0.1rem var(--color-primary);
+  box-shadow: none;
+}
+
+div:focus,
+a:focus,
+li:focus,
+button:focus,
+.esri-widget--button:focus,
+.esriSimpleSliderIncrementButton:focus,
+.esriSimpleSliderDecrementButton:focus,
+.searchBtn.searchSubmit:focus,
+span.file_delete:focus {
+  outline: 0.4rem solid var(--color-warning) !important;
+  outline-offset: unset !important;
+  position: relative;
+  border-radius: 0 !important;
+  transition: none !important;
+}
+
+/* ----- SEND EMAIL --------------------------------------------------------- */
+
+#dform_container button.email-btn.dform_widget_type_button {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: 2.5rem 2.5rem;
+  grid-column-gap: 1rem;
+  align-items: center;
+  margin-block: 2rem;
+  padding: 0;
+  font-size: 1.6rem;
+  font-size: var(--font-size-p1);
+  font-weight: var(--font-weight-semibold);
+  text-align: unset;
+  background: transparent;
+  border: none;
+}
+
+#dform_container button.email-btn.dform_widget_type_button:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+  border: none;
+  box-shadow: none;
+}
+
+#dform_container button.email-btn.dform_widget_type_button::before {
+  content: "\e919";
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  width: 5rem;
+  padding: 1rem;
+  font-size: var(--font-size-h4);
+  font-family: var(--font-icon);
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+
+#dform_container button.email-btn.dform_widget_type_button::after {
+  content: "Email the link to the customer";
+  color: var(--color-black);
+  font-weight: var(--font-weight-regular);
+  text-decoration: underline;
+  text-decoration-color: var(--color-background);
+}
+
+#dform_container button.email-btn.dform_widget_type_button:hover::before {
+  color: var(--color-primary);
+  background: var(--color-white);
+  text-decoration: underline;
+  text-decoration-color: var(--color-white);
+  border: 0.1rem solid var(--color-primary);
+}

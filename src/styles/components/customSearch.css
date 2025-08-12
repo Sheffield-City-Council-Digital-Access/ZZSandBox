@@ -1,0 +1,112 @@
+#dform_container div.area.find-area-container,
+#dform_container div.area.find-area-container > fieldset > legend {
+  margin: 0 0 3rem;
+}
+
+#dform_container .find-container > div {
+  display: grid;
+  grid-template-columns: minmax(0, 44.5rem) max-content;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+#dform_container .find-container.small > div {
+  grid-template-columns: minmax(0, 21rem) max-content;
+}
+
+#dform_container .find-container.locator {
+  margin-bottom: 1.6rem;
+}
+
+@media screen and (min-width: 800px) {
+  #dform_container .find-container.small > div {
+    grid-template-columns: minmax(0, 21rem) max-content max-content;
+  }
+}
+
+#dform_container .dform_widget.find-input,
+#dform_container .dform_widget.find-btn-container,
+#dform_container .dform_widget.enter-manually-btn-container {
+  padding: 0;
+  margin: 0;
+}
+
+#dform_container .dform_widget.find-btn-container,
+#dform_container .dform_widget.enter-manually-btn-container {
+  width: max-content;
+}
+
+#dform_container .dform_widget.find-input label,
+#dform_container .dform_widget.find-input .dform_validationMessage {
+  width: min(100%, 44.5rem);
+  overflow: visible;
+  white-space: nowrap;
+}
+
+#dform_container .dform_widget.find-input input {
+  width: min(100%, 44.5rem);
+  border-right: transparent;
+}
+
+#dform_container .dform_widget.find-input.small input,
+#dform_container .helptext,
+#dform_container .dform_widget.find-input .dform_validationMessage {
+  width: min(100%, 21rem);
+  overflow: visible;
+  white-space: nowrap;
+}
+
+#dform_container .dform_widget.find-btn-container,
+#dform_container .dform_widget.enter-manually-btn-container {
+  margin: 0;
+}
+
+#dform_container .dform_widget.find-btn-container button,
+#dform_container .dform_widget.enter-manually-btn-container button {
+  margin: 0;
+  width: 13.5rem;
+  font-size: var(--font-size-p1);
+}
+
+#dform_container .dform_widget.find-btn-container button {
+  margin-right: 0;
+}
+
+@media screen and (min-width: 450px) {
+  #dform_container .dform_widget.find-btn-container button {
+    margin-right: 2.5rem;
+  }
+}
+
+#dform_container .dform_widget.enter-manually-btn-container button {
+  border: none;
+  background: none;
+  text-decoration: none;
+  font-size: var(--font-size-p1);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--font-height-p1);
+  padding: 0;
+  text-align: left;
+  width: 100%;
+}
+
+#dform_container .dform_widget.enter-manually-btn-container button:hover {
+  text-decoration: underline;
+  color: var(--color-primary);
+  box-shadow: none;
+}
+
+#dform_container .find-input:focus-within,
+#dform_container .find-btn-container:focus-within {
+  z-index: 999;
+}
+
+#dform_container .find-input input:focus {
+  border-right: 0.4rem solid var(--color-grey-5);
+}
+
+#dform_container .selected-address-container output,
+#dform_container .locator-selected-address output {
+  margin-left: 0.6rem;
+  font-size: 1.6rem;
+}
